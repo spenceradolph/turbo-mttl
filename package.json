@@ -1,0 +1,35 @@
+{
+	"name": "turbo-mttl",
+	"version": "0.0.0",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"prisma": {
+		"schema": "packages/database/prisma/schema.prisma"
+	},
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\""
+	},
+	"devDependencies": {
+		"eslint-config-custom": "workspace:*",
+		"prettier": "latest",
+		"turbo": "latest"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"dependencies": {},
+	"packageManager": "pnpm@6.19.0",
+	"prettier": {
+		"tabWidth": 4,
+		"semi": true,
+		"singleQuote": true,
+		"useTabs": true,
+		"printWidth": 200
+	}
+}
